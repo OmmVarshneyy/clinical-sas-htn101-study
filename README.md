@@ -1,9 +1,9 @@
 Clinical SAS Project — HTN101 Phase II Study
 Overview
 
-This project is a mock Phase II clinical trial created to practice an end-to-end Clinical SAS workflow.
+This project simulates a Phase II clinical trial to practice a complete Clinical SAS workflow from raw data to reporting outputs.
 
-The study evaluates an investigational drug HTN-101 compared with placebo in patients with hypertension.
+The study evaluates investigational drug HTN-101 versus placebo in hypertension patients.
 
 Subjects: 120
 
@@ -15,13 +15,13 @@ Objectives
 
 Practice structured clinical programming workflow
 
-Understand raw → analysis → reporting flow
+Understand Raw → Analysis → Reporting flow
 
 Create ADaM-style datasets
 
 Generate basic safety tables
 
-This is a learning project focused on clarity rather than production-level complexity.
+This project focuses on learning logic and structure rather than production-level complexity.
 
 Workflow
 
@@ -32,9 +32,9 @@ Raw Data
 
 DM — Demographics (age, sex, race, weight, treatment)
 
-VS — Vital signs (systolic & diastolic BP across visits)
+VS — Vital signs (systolic and diastolic blood pressure across visits)
 
-AE — Adverse events (term, severity, day)
+AE — Adverse events (term, severity, occurrence day)
 
 All datasets are simulated using DATA step and RAND functions.
 
@@ -47,9 +47,9 @@ SAFFL — Safety population flag
 
 TRTAN — Numeric treatment
 
-Baseline systolic BP
+BASE_SYSBP — Baseline systolic BP
 
-Baseline diastolic BP
+BASE_DIABP — Baseline diastolic BP
 
 ADAE
 
@@ -62,11 +62,15 @@ Demographics
 
 Sex distribution by treatment
 
-Age, weight, baseline BP summary
+Age summary
+
+Weight summary
+
+Baseline BP summary
 
 Adverse Events
 
-Treatment emergent AE frequency by treatment group
+Treatment emergent adverse event frequency by treatment group
 
 Tables created using PROC FREQ and PROC MEANS.
 
@@ -75,30 +79,30 @@ Program	Purpose
 01_create_raw_data.sas	Creates DM, VS, AE
 02_create_adsl.sas	Builds ADSL
 03_create_adae.sas	Builds ADAE
-04_demographics_tables.sas	Demographic tables
-05_ae_tables.sas	AE tables
+04_demographics_tables.sas	Demographic summaries
+05_ae_tables.sas	AE summaries
 
-Run programs sequentially.
+Programs should be run sequentially.
 
 How to Run
 
-01_create_raw_data.sas
+Run 01_create_raw_data.sas
 
-02_create_adsl.sas
+Run 02_create_adsl.sas
 
-03_create_adae.sas
+Run 03_create_adae.sas
 
-04_demographics_tables.sas
+Run 04_demographics_tables.sas
 
-05_ae_tables.sas
+Run 05_ae_tables.sas
 
-Datasets are created in the WORK library.
+All datasets are created in the WORK library.
 
 Notes
 
 Simulated data only
 
-For learning and portfolio use
+Created for learning and portfolio demonstration
 
 Simplified ADaM logic
 
@@ -108,7 +112,7 @@ Skills Demonstrated
 
 DATA step programming
 
-Dataset merging
+Dataset merging and sorting
 
 Variable derivation
 
@@ -116,8 +120,8 @@ Basic ADaM concepts
 
 Safety table generation
 
-Organized workflow
+Structured workflow organization
 
 Author
 
-Beginner Clinical SAS learner building practical understanding of clinical trial programming.
+Beginner Clinical SAS learner building hands-on understanding of clinical trial programming workflow.
